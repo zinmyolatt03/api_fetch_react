@@ -1,0 +1,116 @@
+/* Card-based design */
+.trip-container {
+  max-width: 700px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 30px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Main heading */
+.trip-container h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: left;
+  margin: 0 0 2rem 0;
+  color: #0f172a;
+  position: relative;
+}
+
+.trip-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #0f172a;
+  border-radius: 2px;
+}
+
+/* Trip list */
+.trip-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+/* Individual trip cards */
+.trip-container li {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.trip-container li:hover {
+  border-color: #0f172a;
+  transform: translateX(4px);
+  box-shadow: -4px 4px 0px #0f172a;
+}
+
+/* Trip names */
+.trip-container h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Trip prices */
+.trip-container p {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .trip-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .trip-container h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* Button container */
+.trip-container button {
+  background: #333;
+  color: #ffffff;
+  border: 1px solid #555;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem 1.5rem 2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.trip-container button:hover {
+  background: #404040;
+  border-color: #666;
+}
+
+.trip-container button:active {
+  background: #2a2a2a;
+  transform: translateY(1px);
+}
+
+.trip-container button:first-of-type {
+  margin-left: 2rem;
+}

@@ -1,0 +1,34 @@
+{
+    "trips" : [
+        {
+            "id": 1,
+            "name": "Trip to the mountains",
+            "price": 10000,
+            "country": "Myanmar"
+        },
+        {
+            "id": 2,
+            "name": "Trip to the beach",
+            "price": 20000,
+            "country": "Thailand"
+        },
+        {
+            "id": 3,
+            "name": "Trip to the city",
+            "price": 30000,
+            "country": "Vietnam"
+        },
+        {
+            "id": 4,
+            "name": "Trip to the desert",
+            "price": 40000,
+            "country": "Myanmar"
+        },
+        {
+            "id": 5,
+            "name": "Trip to the forest",
+            "price": 50000,
+            "country": "Brazil"
+        }
+    ]
+}
