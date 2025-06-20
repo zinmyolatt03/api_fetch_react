@@ -7,8 +7,12 @@ export default function useFetchApi( url ){
     let [ error, setError ] = useState(null);
 
     useEffect( () => {
+        let abortController = new AbortController();
+        let signal  = abortController.signal;
         setLoading( true );
-        fetch(url)
+        fetch(url, {
+            signal
+        })
         .then( response => {
             if( ! response.ok){
                 throw Error("page not found...")
@@ -23,6 +27,8 @@ export default function useFetchApi( url ){
         .catch( e => {
             setError(e.message )
         })
+
+        return () => abortController.abort();
     }, [ url ])    
 
     return { data, loading, error  };
